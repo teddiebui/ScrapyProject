@@ -6,9 +6,13 @@
 import scrapy
 
 
-class CrawlerItem(scrapy.Item):
-    # define the fields for your item here like:
-    # name = scrapy.Field()
-    User = scrapy.Field()
-    Comment = scrapy.Field()
-    Time = scrapy.Field()
+class MediaItem(scrapy.Item):
+    created_time = scrapy.Field()
+    updated_time = scrapy.Field()
+    media_name = scrapy.Field()
+    media_size = scrapy.Field()
+    media_type = scrapy.Field()
+    media_mime_type = scrapy.Field()
+    media_id = scrapy.Field()
+    media_url = scrapy.Field()
+    media_path = scrapy.Field()

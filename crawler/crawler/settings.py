@@ -14,8 +14,8 @@ NEWSPIDER_MODULE = "crawler.spiders"
 
 ROBOTSTXT_OBEY=False
 
-# LOG_ENABLED = True  # Bật logging
-# LOG_LEVEL = 'DEBUG'  # Mức độ log (DEBUG, INFO, WARNING, ERROR, CRITICAL)
+# LOG_ENABLED = True 
+LOG_LEVEL = 'DEBUG'  # Mức độ log (DEBUG, INFO, WARNING, ERROR, CRITICAL)
 # LOG_FILE = 'scrapy_log.txt'  # Tên file log, đường dẫn có thể tùy chỉnh
 
 DEFAULT_REQUEST_HEADERS = {
@@ -45,7 +45,7 @@ FEED_EXPORT_ENCODING = 'utf-8'
 #USER_AGENT = "crawler (+http://www.yourdomain.com)"
 
 # Obey robots.txt rules
-ROBOTSTXT_OBEY = True
+# ROBOTSTXT_OBEY = True
 
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
 #CONCURRENT_REQUESTS = 32
@@ -90,9 +90,9 @@ ROBOTSTXT_OBEY = True
 
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
-#ITEM_PIPELINES = {
-#    "crawler.pipelines.CrawlerPipeline": 300,
-#}
+ITEM_PIPELINES = {
+   "crawler.pipelines.JsonWriterPipeline": 300,
+}
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://docs.scrapy.org/en/latest/topics/autothrottle.html
