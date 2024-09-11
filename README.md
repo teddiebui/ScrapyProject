@@ -12,7 +12,7 @@ To set up the project locally, follow these instructions:
 
 ```bash
 git clone https://github.com/your-username/ScrapyProject.git
-cd ScrapyProject
+cd ScrapyProject\crawler
 ```
 
 ### 2. Set Up a Virtual Environment
